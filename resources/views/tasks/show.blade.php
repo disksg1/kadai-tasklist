@@ -4,17 +4,17 @@
 
     <h1>id = {{ $task->id }} のタスク詳細ページ</h1>
     <table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <td>{{ $task->id }}</td>
-    <tr>
-        <th>タスク</th>
-        <td>{{ $task->content }}</td>
-    </tr>
-    <tr>
-        <th>ステータス<th>
-        <td>{{ $task->taskName }}</td>
-    </tr>
+        <tr>
+            <th>ID</th>
+            <td>{{ $task->id }}</td>
+        <tr>
+            <th>タスク</th>
+            <td>{{ $task->content }}</td>
+        </tr>
+        <tr>
+            <th>ステータス</th>
+            <td>{{ $task->statusName }}</td>
+        </tr>
     </table>
 
     {!! link_to_route('tasks.edit', 'このタスクを編集', ['id' => $task->id],['class'=>'btn btn-default']) !!}
